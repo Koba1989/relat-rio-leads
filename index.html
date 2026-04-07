@@ -11,7 +11,6 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
         
-        /* Modal Styles */
         #modal {
             display: none;
             position: fixed;
@@ -44,7 +43,6 @@
             overflow-y: auto;
         }
         
-        /* Table Styles */
         table { width: 100%; border-collapse: collapse; }
         th { background-color: #f9fafb; text-align: left; padding: 12px; font-size: 0.875rem; font-weight: 600; color: #6b7280; border-bottom: 1px solid #e5e7eb; }
         td { padding: 12px; font-size: 0.875rem; border-bottom: 1px solid #e5e7eb; color: #374151; }
@@ -54,7 +52,6 @@
 <body class="text-gray-800 p-6">
 
     <div id="pdf-content" class="max-w-7xl mx-auto p-4">
-        <!-- Header -->
         <header class="mb-8 flex flex-col md:flex-row md:justify-between md:items-center">
             <div>
                 <h1 class="text-3xl font-bold text-gray-900">Análise de Descarte de Leads (MQL)</h1>
@@ -66,33 +63,57 @@
             </button>
         </header>
 
-        <!-- KPI Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            <div class="bg-white rounded-lg shadow p-6 border-l-4 border-blue-500">
-                <h3 class="text-sm font-semibold text-gray-500 uppercase">Total Analisado</h3>
-                <p class="text-3xl font-bold text-gray-900 mt-2">139</p>
-                <p class="text-xs text-gray-400 mt-1">Leads com validação preenchida</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div class="bg-white rounded-lg shadow p-4 border-l-4 border-blue-600">
+                <h3 class="text-xs font-semibold text-gray-500 uppercase">Total Analisado</h3>
+                <p class="text-2xl font-bold text-gray-900 mt-1">100%</p>
+                <p class="text-xs text-blue-600 mt-1 font-semibold">139 leads analisados</p>
             </div>
-            <div class="bg-white rounded-lg shadow p-6 border-l-4 border-red-500">
-                <h3 class="text-sm font-semibold text-gray-500 uppercase">Dados Inválidos / Fakes</h3>
-                <p class="text-3xl font-bold text-gray-900 mt-2">28,8%</p>
-                <p class="text-xs text-gray-400 mt-1">40 oportunidades perdidas</p>
+            
+            <div class="bg-white rounded-lg shadow p-4 border-l-4 border-blue-400">
+                <h3 class="text-xs font-semibold text-gray-500 uppercase">Sem Interesse / Concorrente</h3>
+                <p class="text-2xl font-bold text-gray-900 mt-1">28,8%</p>
+                <p class="text-xs text-blue-500 mt-1 font-semibold">40 leads do total</p>
             </div>
-            <div class="bg-white rounded-lg shadow p-6 border-l-4 border-yellow-500">
-                <h3 class="text-sm font-semibold text-gray-500 uppercase">Sem Engajamento</h3>
-                <p class="text-3xl font-bold text-gray-900 mt-2">23,7%</p>
-                <p class="text-xs text-gray-400 mt-1">33 cadências sem resposta</p>
+
+            <div class="bg-white rounded-lg shadow p-4 border-l-4 border-red-500">
+                <h3 class="text-xs font-semibold text-gray-500 uppercase">Dados Inválidos / Fakes</h3>
+                <p class="text-2xl font-bold text-gray-900 mt-1">28,8%</p>
+                <p class="text-xs text-red-600 mt-1 font-semibold">40 leads do total</p>
             </div>
-            <div class="bg-white rounded-lg shadow p-6 border-l-4 border-purple-500">
-                <h3 class="text-sm font-semibold text-gray-500 uppercase">Pendente de Validação</h3>
-                <p class="text-3xl font-bold text-gray-900 mt-2">7,9%</p>
-                <p class="text-xs text-gray-400 mt-1">11 registros em aberto</p>
+
+            <div class="bg-white rounded-lg shadow p-4 border-l-4 border-yellow-500">
+                <h3 class="text-xs font-semibold text-gray-500 uppercase">Sem Engajamento</h3>
+                <p class="text-2xl font-bold text-gray-900 mt-1">23,7%</p>
+                <p class="text-xs text-yellow-600 mt-1 font-semibold">33 leads do total</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-4 border-l-4 border-purple-500">
+                <h3 class="text-xs font-semibold text-gray-500 uppercase">Pendente / Validação</h3>
+                <p class="text-2xl font-bold text-gray-900 mt-1">7,9%</p>
+                <p class="text-xs text-purple-600 mt-1 font-semibold">11 leads do total</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-4 border-l-4 border-gray-500">
+                <h3 class="text-xs font-semibold text-gray-500 uppercase">Engano / Uso Pessoal</h3>
+                <p class="text-2xl font-bold text-gray-900 mt-1">6,5%</p>
+                <p class="text-xs text-gray-600 mt-1 font-semibold">9 leads do total</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-4 border-l-4 border-gray-400">
+                <h3 class="text-xs font-semibold text-gray-500 uppercase">Outros</h3>
+                <p class="text-2xl font-bold text-gray-900 mt-1">3,6%</p>
+                <p class="text-xs text-gray-500 mt-1 font-semibold">5 leads do total</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-4 border-l-4 border-green-500">
+                <h3 class="text-xs font-semibold text-gray-500 uppercase">Já é Cliente</h3>
+                <p class="text-2xl font-bold text-gray-900 mt-1">0,7%</p>
+                <p class="text-xs text-green-600 mt-1 font-semibold">1 lead do total</p>
             </div>
         </div>
 
-        <!-- Charts Section -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-            <!-- Bar Chart -->
             <div class="bg-white rounded-lg shadow p-6">
                 <h2 class="text-lg font-semibold mb-1">Volume de Descarte por Categoria</h2>
                 <p class="text-xs text-gray-500 mb-4 italic">Clique nas barras para ver os detalhes</p>
@@ -100,7 +121,6 @@
                     <canvas id="barChart"></canvas>
                 </div>
             </div>
-            <!-- Doughnut Chart -->
             <div class="bg-white rounded-lg shadow p-6">
                 <h2 class="text-lg font-semibold mb-1">Distribuição de Motivos (%)</h2>
                 <p class="text-xs text-gray-500 mb-4 italic text-center">Clique nas fatias para ver os detalhes</p>
@@ -110,7 +130,6 @@
             </div>
         </div>
 
-        <!-- Pareceres Section -->
         <div class="bg-white rounded-lg shadow p-6">
             <h2 class="text-xl font-bold text-gray-900 mb-6 border-b pb-2">Pareceres Estratégicos e Recomendações</h2>
             
@@ -118,35 +137,34 @@
                 <div>
                     <h3 class="font-semibold text-red-600 mb-2">1. Qualificação Inicial de MQLs</h3>
                     <p class="text-sm text-gray-700 mb-4">
-                        O volume de leads fakes, dados inválidos ou perfis de estudantes representa 28,8% do total. Recomenda-se implementar validação de domínio corporativo nos formulários de entrada e revisar os critérios de pontuação no marketing antes da passagem para pré-vendas.
+                        O volume de leads fakes, dados inválidos ou perfis de estudantes representa 28,8% (40 leads) do total. Recomenda-se implementar validação de domínio corporativo nos formulários de entrada e revisar os critérios de pontuação no marketing antes da passagem para pré-vendas.
                     </p>
                 </div>
                 
                 <div>
                     <h3 class="font-semibold text-blue-600 mb-2">2. Desalinhamento de Oferta</h3>
                     <p class="text-sm text-gray-700 mb-4">
-                        Empatado em primeiro lugar (28,8%), temos leads sem interesse, buscando soluções gratuitas ou já optando por concorrentes diretos. É necessário alinhar a expectativa gerada pelas campanhas de atração, deixando claro o modelo de negócio (pago/enterprise) logo nas primeiras interações.
+                        Empatado em primeiro lugar com 28,8% (40 leads), temos leads sem interesse, buscando soluções gratuitas ou já optando por concorrentes diretos. É necessário alinhar a expectativa gerada pelas campanhas de atração, deixando claro o modelo de negócio (pago/enterprise) logo nas primeiras interações.
                     </p>
                 </div>
 
                 <div>
                     <h3 class="font-semibold text-yellow-600 mb-2">3. Efetividade da Cadência</h3>
                     <p class="text-sm text-gray-700 mb-4">
-                        Com 23,7% dos leads finalizando ciclos longos (até 27 dias) sem qualquer resposta, há desgaste operacional. Sugere-se reduzir o tempo de ciclo para leads sem engajamento inicial e variar os canais ou horários de tentativa nos primeiros dias de contato.
+                        Com 23,7% (33 leads) finalizando ciclos longos (até 27 dias) sem qualquer resposta, há desgaste operacional. Sugere-se reduzir o tempo de ciclo para leads sem engajamento inicial e variar os canais ou horários de tentativa nos primeiros dias de contato.
                     </p>
                 </div>
 
                 <div>
                     <h3 class="font-semibold text-purple-600 mb-2">4. Gestão e Higiene do Funil</h3>
                     <p class="text-sm text-gray-700 mb-4">
-                        Aproximadamente 8% das oportunidades analisadas continuam com justificativas abertas ("validar"). É essencial definir um SLA interno para a conclusão desses retornos gerenciais, garantindo a manutenção de métricas precisas de conversão da equipe.
+                        Aproximadamente 7,9% (11 leads) das oportunidades analisadas continuam com justificativas abertas ("validar"). É essencial definir um SLA interno para a conclusão desses retornos gerenciais, garantindo a manutenção de métricas precisas de conversão da equipe.
                     </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal for displaying details -->
     <div id="modal">
         <div id="modal-content">
             <div id="modal-header">
@@ -163,7 +181,6 @@
                         </tr>
                     </thead>
                     <tbody id="details-tbody">
-                        <!-- Content populated by JS -->
                     </tbody>
                 </table>
             </div>
@@ -171,9 +188,24 @@
     </div>
 
     <script>
-        const rawData = {"Outros": [{"negocio": "[542595] Monte TAbor", "motivo": "Descarte Correto, porque o histórico sustenta o encerramento", "proprietario": "Evelyn Camargo"}, {"negocio": "[541859] bees", "motivo": "Descarte correto - Busca por google forms e gratuito ", "proprietario": "Evelyn Camargo"}, {"negocio": "[541419] Prefeitura  Municipal", "motivo": "Descarte Correto - 18 dias sem sucesso na prospecçao - número não chama - sem whats   ", "proprietario": "Evelyn Camargo"}, {"negocio": "[542523] bento munhoz", "motivo": "Colégio Estadual Bento Munhoz da Rocha Neto", "proprietario": "Letícia Maciel"}, {"negocio": "[540751] Grupo Saga", "motivo": "Grupo Saga já são clientes", "proprietario": "Evelyn Camargo"}], "Sem Interesse / Concorrente": [{"negocio": "[541170] Olist", "motivo": "Descarte Correto - Escolheu pelo clickup", "proprietario": "Evelyn Camargo"}, {"negocio": "[541786] Confidencial", "motivo": "Descarte Correto - Lead procurava outra solução", "proprietario": "Evelyn Camargo"}, {"negocio": "[541460] C.Vale", "motivo": "Descarte Correto - Respondeu no whats que não tem interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[541434] Embalagens Prática", "motivo": "Descarte Correto - Informou não ter interesse no momento - Colocamos em cadência de nutrição", "proprietario": "Evelyn Camargo"}, {"negocio": "[541477] Ema", "motivo": "Descarte Correto - 11d e respondeu nao ter interesse ", "proprietario": "Evelyn Camargo"}, {"negocio": "[541334] Brisa Saúde", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[541295] Rumo", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[541147] Zênite", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[541016] Usiminas", "motivo": "Descarte Correto - 13d de cadência com emails ligações e whats - respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[541219] Unipampa", "motivo": "Descarte Correto - Freemium", "proprietario": "Evelyn Camargo"}, {"negocio": "[540854] A3 Ambiental", "motivo": "Descarte Correto - Cadencia realizada 5 emails , 3 whats e 2 ligações onde informou não ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540974] RCEIT", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540898] GFT", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540905] NTS BRASIL", "motivo": "Descarte Correto - Lead respondeu nao ter interesse  - Fora do ICP", "proprietario": "Evelyn Camargo"}, {"negocio": "[540836] iClinic", "motivo": "Descarte Correto - Lead respondeu o primeiro email que não tinha interesse e que cancelasse todos os dados dele", "proprietario": "Evelyn Camargo"}, {"negocio": "[540546] Unichristus", "motivo": "Descarte Correto - 6dias de prospecção entre emails , ligação , whats e lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540608] Lojacorr", "motivo": "Descarte Correto - 6d e respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540562] Grupo Petrópolis", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540669] Unip", "motivo": "Descarte Correto - 7d e respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540554] Hospital das Clínicas", "motivo": "Descarte Correto - 9d e respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540563] TOTVS", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540552] SESI", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540526] Anfavea", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[542468] MPT", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[542171] Confidencial", "motivo": "Descarte Correto - Queria nos vender o serviço deles", "proprietario": "Carla Bonifacio"}, {"negocio": "[541818] Engefoto", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[541913] Sicredi", "motivo": "Descarte correto - 17d de retornou nao ter interesse ", "proprietario": "Carla Bonifacio"}, {"negocio": "[541785] brf", "motivo": "Descarte Correto  - sem interesse, já tinham escolhido outra solução - Investigar timing da prospecção ***", "proprietario": "Carla Bonifacio"}, {"negocio": "[541710] Vivo", "motivo": "Descarte Correto - sem interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[541571] Confidencial", "motivo": "Descarte Correto - 9 dias de prospecção 13 tentativas de contato entre emails ligações e no whats respondeu nao ter interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[541544] Confidencial", "motivo": "Descarte Correto - Respondeu no whats que não tem interesse - na verdade ele fez o cadastro para apresentar a uma amiga com uso pessoal", "proprietario": "Carla Bonifacio"}, {"negocio": "[540700] CIEE", "motivo": "Descarte Correto - Respondeu no whats que não tem interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[541481] Unimed", "motivo": "Descarte Correto - 12d - Usam o Jira e empresa não aprovou outra solução", "proprietario": "Carla Bonifacio"}, {"negocio": "[541178] Stefanini", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[541337] Hospital Sirio Libanes", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[541103] Dasa", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[541097] Confidencial", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[540798] Banco do Brasil", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[541249] Pague Menos", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Letícia Maciel"}, {"negocio": "[540707] Confidencial", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Letícia Maciel"}], "Dados Inválidos / Fakes": [{"negocio": "[542017] prefeitura de palhoça ", "motivo": "telefone nao é da pessoa - empresa nao localizada", "proprietario": "Evelyn Camargo"}, {"negocio": "[541819] Lojas Colombo", "motivo": "sem dados suficiente para prospecção", "proprietario": "Evelyn Camargo"}, {"negocio": "[541607] Embraer", "motivo": "Fora do ICP e cadencia realizada 14d ", "proprietario": "Evelyn Camargo"}, {"negocio": "[541315] Localiza", "motivo": "sem dados suficiente para prospecção", "proprietario": "Evelyn Camargo"}, {"negocio": "[541300] SEBRAE", "motivo": "sem dados suficiente para prospecção", "proprietario": "Evelyn Camargo"}, {"negocio": "[541221] Confidencial", "motivo": "telefone não existe e empresa tbm não.", "proprietario": "Evelyn Camargo"}, {"negocio": "[540855] Grupo Boticário", "motivo": "sem dados suficiente para prospecção", "proprietario": "Evelyn Camargo"}, {"negocio": "[540879] Confidencial", "motivo": "sem dados suficiente para prospecção", "proprietario": "Evelyn Camargo"}, {"negocio": "[540726] Confidencial", "motivo": "Descarte Correto - 8d prospecção email - telefone errado - feedback ", "proprietario": "Evelyn Camargo"}, {"negocio": "[540788] UFG", "motivo": "sem dados suficiente para prospecção", "proprietario": "Evelyn Camargo"}, {"negocio": "[540600] Etec", "motivo": "Descarte Correto - Estudante (preencheu cargo de coordenador/gerente)", "proprietario": "Evelyn Camargo"}, {"negocio": "[540566] Etec", "motivo": "foto de anime no perfil do wpp - Dominio etec (provável aluno)", "proprietario": "Evelyn Camargo"}, {"negocio": "[540540] Ambev", "motivo": "sem dados suficiente para prospecção", "proprietario": "Evelyn Camargo"}, {"negocio": "[542289] Confidencial", "motivo": "Lead fake, sem empresa e e-mail válido", "proprietario": "Carla Bonifacio"}, {"negocio": "[542095] prefeitura de marataízes", "motivo": "O telefone era de outra pessoa não retornou aos email ciclo 11d", "proprietario": "Carla Bonifacio"}, {"negocio": "[541743] Sicoob", "motivo": "Fora do ICP", "proprietario": "Carla Bonifacio"}, {"negocio": "[541570] Confidencial", "motivo": "cadencia de emails realizado sem sucesso - telefone errado ", "proprietario": "Carla Bonifacio"}, {"negocio": "[541595] Confidencial", "motivo": "cadencia de emails realizado sem sucesso ciclo de 11d - telefone errado ", "proprietario": "Carla Bonifacio"}, {"negocio": "[541243] UFRJ", "motivo": "Fora ICP - lead fake, telefone de outra pessoa", "proprietario": "Carla Bonifacio"}, {"negocio": "[541331] iFood", "motivo": "sem dados suficiente para prospecção", "proprietario": "Carla Bonifacio"}, {"negocio": "[541285] Etec", "motivo": "aluna etEC", "proprietario": "Carla Bonifacio"}, {"negocio": "[541093] UFRGS", "motivo": "estudante", "proprietario": "Carla Bonifacio"}, {"negocio": "[540960] Confidencial", "motivo": "sem dados suficiente para prospecção", "proprietario": "Carla Bonifacio"}, {"negocio": "[540927] Confidencial", "motivo": "Numero errado - tentamos achar contato apolo - email não corporativo", "proprietario": "Carla Bonifacio"}, {"negocio": "[541029] TOTVS", "motivo": "cadencia de emails realizado sem sucesso ciclo de 19d - telefone errado ", "proprietario": "Carla Bonifacio"}, {"negocio": "[540915] Etec", "motivo": "telefone errado , tentativa por email - cadencia interrompida antes do ciclo ", "proprietario": "Carla Bonifacio"}, {"negocio": "[540706] FIEMG", "motivo": "cadencia de emails realizado sem sucesso - telefone errado ", "proprietario": "Carla Bonifacio"}, {"negocio": "[540723] PUC Minas", "motivo": "empresa não existe, possivelmente aluno de faculdade", "proprietario": "Carla Bonifacio"}, {"negocio": "[542646] emef madre maria viganó", "motivo": "escola madre maria vigano -  emef.madrevigano@semedcastanhal.pa.gov.br", "proprietario": "Letícia Maciel"}, {"negocio": "[542018] Confidencial", "motivo": "O telefone era de outra pessoa não retornou aos email ciclo 9d", "proprietario": "Letícia Maciel"}, {"negocio": "[542014] Coplana", "motivo": "Numero não é dele email não é valido - empresa nao localizada", "proprietario": "Letícia Maciel"}, {"negocio": "[541753] Prefeitura de Itariri", "motivo": "Ciclo de 10d  - organização social filantrópica - telefone não existe , sem dados linkedln ", "proprietario": "Letícia Maciel"}, {"negocio": "[541812] InBetta", "motivo": "Descarte Correto - 11d de cadencia , sem retorno e fora do ICP ", "proprietario": "Letícia Maciel"}, {"negocio": "[541484] Confidencial", "motivo": "email, telefone e wpp não existem", "proprietario": "Letícia Maciel"}, {"negocio": "[541452] Ufba", "motivo": "lead fake", "proprietario": "Letícia Maciel"}, {"negocio": "[541443] UNESP", "motivo": "empresa não existe, email é hotmail, ligação atende, mas não fala nada. mandei wpp tbm ", "proprietario": "Letícia Maciel"}, {"negocio": "[541314] Senac", "motivo": "Fora ICP", "proprietario": "Letícia Maciel"}, {"negocio": "[540939] brf", "motivo": "sem dados suficiente para prospecção - telefone fake", "proprietario": "Letícia Maciel"}, {"negocio": "[540604] FIEMG", "motivo": "numero não é wpp - organização sem fins lucrativos", "proprietario": "Letícia Maciel"}, {"negocio": "[540640] Fermavi", "motivo": "Leads Fakes (sem contato, sem nome de empresa, telefone falso, etc)", "proprietario": "Letícia Maciel"}], "Engano / Uso Pessoal": [{"negocio": "[542456] Sefaz", "motivo": "Descarte Correto -  Disse que não tem interesse e criou por engano", "proprietario": "Evelyn Camargo"}, {"negocio": "[542261] UFRN", "motivo": "Descarte Correto -  Disse que cadastrou por engano", "proprietario": "Evelyn Camargo"}, {"negocio": "[542283] Tribunal de Justiça", "motivo": "Descarte Correto - Informou que fez por engano", "proprietario": "Evelyn Camargo"}, {"negocio": "[541578] Tribunal de Justiça", "motivo": "Descarte Correto - Informou que fez por engano", "proprietario": "Evelyn Camargo"}, {"negocio": "[541246] IFSP", "motivo": "Eu fiz o login porque achei que ele oferecia o teste Disc grátis", "proprietario": "Evelyn Camargo"}, {"negocio": "[541175] TOTVS", "motivo": "Descarte Correto - Estava só curiosa e não tem orientação para contratar nenhuma solução", "proprietario": "Evelyn Camargo"}, {"negocio": "[542469] Confidencial", "motivo": "Descarte correto  - Respondeu que fez o cadastro engano", "proprietario": "Carla Bonifacio"}, {"negocio": "[542449] brf", "motivo": "Descarte correto  - Respondeu que fez o cadastro engano", "proprietario": "Carla Bonifacio"}, {"negocio": "[542111] Tribunal de Justiça", "motivo": "Descarte correto -  Uso pessoal ", "proprietario": "Carla Bonifacio"}], "Sem Sucesso na Cadência": [{"negocio": "[541372] C&A", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 11d", "proprietario": "Evelyn Camargo"}, {"negocio": "[541123] SBT", "motivo": "Ciclo de 14d esforço de ligação , whats e email sem sucesso", "proprietario": "Evelyn Camargo"}, {"negocio": "[541132] PUC Minas", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 12d", "proprietario": "Evelyn Camargo"}, {"negocio": "[541031] Lojas Renner", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 25d", "proprietario": "Evelyn Camargo"}, {"negocio": "[540702] Confidencial", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 21d ", "proprietario": "Evelyn Camargo"}, {"negocio": "[540728] Confidencial", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 13d", "proprietario": "Evelyn Camargo"}, {"negocio": "[540541] BRQ", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 21d ", "proprietario": "Evelyn Camargo"}, {"negocio": "[542526] ufpr", "motivo": "Descarte com 10d  ciclo sem retorno em nenhum canal - Feedback respeitar 14d de trial", "proprietario": "Carla Bonifacio"}, {"negocio": "[542457] Unimed", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso", "proprietario": "Carla Bonifacio"}, {"negocio": "[542036] Confidencial", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 10d", "proprietario": "Carla Bonifacio"}, {"negocio": "[541999] Confidencial", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 11d", "proprietario": "Carla Bonifacio"}, {"negocio": "[541604] Confidencial", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 21d ", "proprietario": "Carla Bonifacio"}, {"negocio": "[541461] Correios", "motivo": "cadencia de ligações e emails realizado sem sucesso ciclo de 21d - tel não é wpp ", "proprietario": "Carla Bonifacio"}, {"negocio": "[541459] UFRN", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 23d", "proprietario": "Carla Bonifacio"}, {"negocio": "[541280] UFSC", "motivo": "Ciclo de 19d esforço de ligação , whats e email sem sucesso ", "proprietario": "Carla Bonifacio"}, {"negocio": "[541018] TOTVS", "motivo": "Ciclo de 14d esforço de ligação , whats e email sem sucesso ", "proprietario": "Carla Bonifacio"}, {"negocio": "[541026] Vivo", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 18d", "proprietario": "Carla Bonifacio"}, {"negocio": "[540786] Grupo Soma", "motivo": "Ciclo de 15d esforço de ligação , whats e email sem sucesso - em uma ligação pediu o contato por email mas não retornou nenhuma mensagem", "proprietario": "Carla Bonifacio"}, {"negocio": "[540733] Confidencial", "motivo": "Telefone errado , cadencia com 6 emails encaminhados sem retorno - ciclo de 11d ", "proprietario": "Carla Bonifacio"}, {"negocio": "[540822] Unimed", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 14d", "proprietario": "Carla Bonifacio"}, {"negocio": "[540542] Tenda", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 15d", "proprietario": "Carla Bonifacio"}, {"negocio": "[542057] Lojas CEM", "motivo": "Descarte correto - 17d de ciclo sem retorno em nenhum canal ", "proprietario": "Letícia Maciel"}, {"negocio": "[542013] Confidencial", "motivo": "Lead parou de responder -  ciclo de 8 dias - cadência ainda parece curta para encerrar a oportunidade com segurança.", "proprietario": "Letícia Maciel"}, {"negocio": "[541666] Lojas Colombo", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 20d", "proprietario": "Letícia Maciel"}, {"negocio": "[541619] Confidencial", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 15d", "proprietario": "Letícia Maciel"}, {"negocio": "[541618] brf", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 24d", "proprietario": "Letícia Maciel"}, {"negocio": "[541612] brf", "motivo": "Ciclo de 14d apresentou interesse no inicio mas não retornou mais nenhumas das tentativas do email e whatsapp ", "proprietario": "Letícia Maciel"}, {"negocio": "[541584] Grendene", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 13d", "proprietario": "Letícia Maciel"}, {"negocio": "[541306] Prefeitura  Municipal", "motivo": "Ciclo de 16d esforço de ligação , whats e email sem sucesso ", "proprietario": "Letícia Maciel"}, {"negocio": "[541094] SBT", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 21d ", "proprietario": "Letícia Maciel"}, {"negocio": "[540656] Sebrae", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 12d", "proprietario": "Letícia Maciel"}, {"negocio": "[540587] odonto seven", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 11...", "proprietario": "Letícia Maciel"}, {"negocio": "[540536] FACCHINI S/A", "motivo": "(Prospecção) Não houve contato", "proprietario": "Amanda Contiéri"}], "A Validar / Revisão": [{"negocio": "[542571] ufpr", "motivo": "**** validar registro ", "proprietario": "Evelyn Camargo"}, {"negocio": "[542387] Tribunal de Justiça", "motivo": "**** validar registro ", "proprietario": "Evelyn Camargo"}, {"negocio": "[542285] SESI", "motivo": "**** validar registro ", "proprietario": "Evelyn Camargo"}, {"negocio": "[541289] Confidencial", "motivo": "** validar ", "proprietario": "Evelyn Camargo"}, {"negocio": "[541065] Ambev", "motivo": "** validar ", "proprietario": "Evelyn Camargo"}, {"negocio": "[542617] Confidencial", "motivo": "**** validar registro ", "proprietario": "Carla Bonifacio"}, {"negocio": "[542587] Cargill Alimentos", "motivo": "**** validar registro ", "proprietario": "Carla Bonifacio"}, {"negocio": "[541433] Embalagens Prática", "motivo": "** validar ", "proprietario": "Carla Bonifacio"}, {"negocio": "[542878] colégio Estadual de Tempo Integral Profª Jaidê Rocha", "motivo": "**** validar registro ", "proprietario": "Letícia Maciel"}, {"negocio": "[542861] brf", "motivo": "**** validar registro ", "proprietario": "Letícia Maciel"}, {"negocio": "[540605] Lojas Renner", "motivo": "** validar ", "proprietario": "Letícia Maciel"}]};
+        const rawData = {
+            "Já é Cliente": [
+                {"negocio": "[540751] Grupo Saga", "motivo": "Grupo Saga já são clientes", "proprietario": "Evelyn Camargo"}
+            ],
+            "Outros": [
+                {"negocio": "[542595] Monte TAbor", "motivo": "Descarte Correto, porque o histórico sustenta o encerramento", "proprietario": "Evelyn Camargo"},
+                {"negocio": "[541859] bees", "motivo": "Descarte correto - Busca por google forms e gratuito ", "proprietario": "Evelyn Camargo"},
+                {"negocio": "[541419] Prefeitura  Municipal", "motivo": "Descarte Correto - 18 dias sem sucesso na prospecçao - número não chama - sem whats", "proprietario": "Evelyn Camargo"},
+                {"negocio": "[542523] bento munhoz", "motivo": "Colégio Estadual Bento Munhoz da Rocha Neto", "proprietario": "Letícia Maciel"},
+                {"negocio": "Não Listado / Em Branco", "motivo": "Motivo não enquadrado nas regras padrão", "proprietario": "N/D"}
+            ],
+            "Sem Interesse / Concorrente": [{"negocio": "[541170] Olist", "motivo": "Descarte Correto - Escolheu pelo clickup", "proprietario": "Evelyn Camargo"}, {"negocio": "[541786] Confidencial", "motivo": "Descarte Correto - Lead procurava outra solução", "proprietario": "Evelyn Camargo"}, {"negocio": "[541460] C.Vale", "motivo": "Descarte Correto - Respondeu no whats que não tem interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[541434] Embalagens Prática", "motivo": "Descarte Correto - Informou não ter interesse no momento - Colocamos em cadência de nutrição", "proprietario": "Evelyn Camargo"}, {"negocio": "[541477] Ema", "motivo": "Descarte Correto - 11d e respondeu nao ter interesse ", "proprietario": "Evelyn Camargo"}, {"negocio": "[541334] Brisa Saúde", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[541295] Rumo", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[541147] Zênite", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[541016] Usiminas", "motivo": "Descarte Correto - 13d de cadência com emails ligações e whats - respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[541219] Unipampa", "motivo": "Descarte Correto - Freemium", "proprietario": "Evelyn Camargo"}, {"negocio": "[540854] A3 Ambiental", "motivo": "Descarte Correto - Cadencia realizada 5 emails , 3 whats e 2 ligações onde informou não ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540974] RCEIT", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540898] GFT", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540905] NTS BRASIL", "motivo": "Descarte Correto - Lead respondeu nao ter interesse  - Fora do ICP", "proprietario": "Evelyn Camargo"}, {"negocio": "[540836] iClinic", "motivo": "Descarte Correto - Lead respondeu o primeiro email que não tinha interesse e que cancelasse todos os dados dele", "proprietario": "Evelyn Camargo"}, {"negocio": "[540546] Unichristus", "motivo": "Descarte Correto - 6dias de prospecção entre emails , ligação , whats e lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540608] Lojacorr", "motivo": "Descarte Correto - 6d e respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540562] Grupo Petrópolis", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540669] Unip", "motivo": "Descarte Correto - 7d e respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540554] Hospital das Clínicas", "motivo": "Descarte Correto - 9d e respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540563] TOTVS", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540552] SESI", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[540526] Anfavea", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Evelyn Camargo"}, {"negocio": "[542468] MPT", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[542171] Confidencial", "motivo": "Descarte Correto - Queria nos vender o serviço deles", "proprietario": "Carla Bonifacio"}, {"negocio": "[541818] Engefoto", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[541913] Sicredi", "motivo": "Descarte correto - 17d de retornou nao ter interesse ", "proprietario": "Carla Bonifacio"}, {"negocio": "[541785] brf", "motivo": "Descarte Correto  - sem interesse, já tinham escolhido outra solução", "proprietario": "Carla Bonifacio"}, {"negocio": "[541710] Vivo", "motivo": "Descarte Correto - sem interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[541571] Confidencial", "motivo": "Descarte Correto - 9 dias de prospecção respondeu nao ter interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[541544] Confidencial", "motivo": "Descarte Correto - Respondeu no whats que não tem interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[540700] CIEE", "motivo": "Descarte Correto - Respondeu no whats que não tem interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[541481] Unimed", "motivo": "Descarte Correto - 12d - Usam o Jira", "proprietario": "Carla Bonifacio"}, {"negocio": "[541178] Stefanini", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[541337] Hospital Sirio Libanes", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[541103] Dasa", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[541097] Confidencial", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[540798] Banco do Brasil", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Carla Bonifacio"}, {"negocio": "[541249] Pague Menos", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Letícia Maciel"}, {"negocio": "[540707] Confidencial", "motivo": "Descarte Correto - Lead respondeu nao ter interesse", "proprietario": "Letícia Maciel"}], 
+            "Dados Inválidos / Fakes": [{"negocio": "[542017] prefeitura de palhoça ", "motivo": "telefone nao é da pessoa - empresa nao localizada", "proprietario": "Evelyn Camargo"}, {"negocio": "[541819] Lojas Colombo", "motivo": "sem dados suficiente para prospecção", "proprietario": "Evelyn Camargo"}, {"negocio": "[541607] Embraer", "motivo": "Fora do ICP e cadencia realizada 14d ", "proprietario": "Evelyn Camargo"}, {"negocio": "[541315] Localiza", "motivo": "sem dados suficiente para prospecção", "proprietario": "Evelyn Camargo"}, {"negocio": "[541300] SEBRAE", "motivo": "sem dados suficiente para prospecção", "proprietario": "Evelyn Camargo"}, {"negocio": "[541221] Confidencial", "motivo": "telefone não existe e empresa tbm não.", "proprietario": "Evelyn Camargo"}, {"negocio": "[540855] Grupo Boticário", "motivo": "sem dados suficiente para prospecção", "proprietario": "Evelyn Camargo"}, {"negocio": "[540879] Confidencial", "motivo": "sem dados suficiente para prospecção", "proprietario": "Evelyn Camargo"}, {"negocio": "[540726] Confidencial", "motivo": "Descarte Correto - 8d prospecção email - telefone errado", "proprietario": "Evelyn Camargo"}, {"negocio": "[540788] UFG", "motivo": "sem dados suficiente para prospecção", "proprietario": "Evelyn Camargo"}, {"negocio": "[540600] Etec", "motivo": "Descarte Correto - Estudante (preencheu cargo de coordenador/gerente)", "proprietario": "Evelyn Camargo"}, {"negocio": "[540566] Etec", "motivo": "foto de anime no perfil do wpp - Dominio etec (provável aluno)", "proprietario": "Evelyn Camargo"}, {"negocio": "[540540] Ambev", "motivo": "sem dados suficiente para prospecção", "proprietario": "Evelyn Camargo"}, {"negocio": "[542289] Confidencial", "motivo": "Lead fake, sem empresa e e-mail válido", "proprietario": "Carla Bonifacio"}, {"negocio": "[542095] prefeitura de marataízes", "motivo": "O telefone era de outra pessoa", "proprietario": "Carla Bonifacio"}, {"negocio": "[541743] Sicoob", "motivo": "Fora do ICP", "proprietario": "Carla Bonifacio"}, {"negocio": "[541570] Confidencial", "motivo": "cadencia de emails realizado sem sucesso - telefone errado ", "proprietario": "Carla Bonifacio"}, {"negocio": "[541595] Confidencial", "motivo": "cadencia de emails - telefone errado ", "proprietario": "Carla Bonifacio"}, {"negocio": "[541243] UFRJ", "motivo": "Fora ICP - lead fake, telefone de outra pessoa", "proprietario": "Carla Bonifacio"}, {"negocio": "[541331] iFood", "motivo": "sem dados suficiente para prospecção", "proprietario": "Carla Bonifacio"}, {"negocio": "[541285] Etec", "motivo": "aluna etEC", "proprietario": "Carla Bonifacio"}, {"negocio": "[541093] UFRGS", "motivo": "estudante", "proprietario": "Carla Bonifacio"}, {"negocio": "[540960] Confidencial", "motivo": "sem dados", "proprietario": "Carla Bonifacio"}, {"negocio": "[540927] Confidencial", "motivo": "Numero errado", "proprietario": "Carla Bonifacio"}, {"negocio": "[541029] TOTVS", "motivo": "telefone errado ", "proprietario": "Carla Bonifacio"}, {"negocio": "[540915] Etec", "motivo": "telefone errado", "proprietario": "Carla Bonifacio"}, {"negocio": "[540706] FIEMG", "motivo": "telefone errado ", "proprietario": "Carla Bonifacio"}, {"negocio": "[540723] PUC Minas", "motivo": "empresa não existe, possivelmente aluno de faculdade", "proprietario": "Carla Bonifacio"}, {"negocio": "[542646] emef madre maria viganó", "motivo": "escola madre maria vigano", "proprietario": "Letícia Maciel"}, {"negocio": "[542018] Confidencial", "motivo": "O telefone era de outra pessoa", "proprietario": "Letícia Maciel"}, {"negocio": "[542014] Coplana", "motivo": "Numero não é dele", "proprietario": "Letícia Maciel"}, {"negocio": "[541753] Prefeitura de Itariri", "motivo": "telefone não existe", "proprietario": "Letícia Maciel"}, {"negocio": "[541812] InBetta", "motivo": "fora do ICP ", "proprietario": "Letícia Maciel"}, {"negocio": "[541484] Confidencial", "motivo": "email, telefone e wpp não existem", "proprietario": "Letícia Maciel"}, {"negocio": "[541452] Ufba", "motivo": "lead fake", "proprietario": "Letícia Maciel"}, {"negocio": "[541443] UNESP", "motivo": "empresa não existe", "proprietario": "Letícia Maciel"}, {"negocio": "[541314] Senac", "motivo": "Fora ICP", "proprietario": "Letícia Maciel"}, {"negocio": "[540939] brf", "motivo": "telefone fake", "proprietario": "Letícia Maciel"}, {"negocio": "[540604] FIEMG", "motivo": "organização sem fins lucrativos", "proprietario": "Letícia Maciel"}, {"negocio": "[540640] Fermavi", "motivo": "Leads Fakes", "proprietario": "Letícia Maciel"}], 
+            "Engano / Uso Pessoal": [{"negocio": "[542456] Sefaz", "motivo": "Descarte Correto -  Disse que não tem interesse e criou por engano", "proprietario": "Evelyn Camargo"}, {"negocio": "[542261] UFRN", "motivo": "Descarte Correto -  Disse que cadastrou por engano", "proprietario": "Evelyn Camargo"}, {"negocio": "[542283] Tribunal de Justiça", "motivo": "Descarte Correto - Informou que fez por engano", "proprietario": "Evelyn Camargo"}, {"negocio": "[541578] Tribunal de Justiça", "motivo": "Descarte Correto - Informou que fez por engano", "proprietario": "Evelyn Camargo"}, {"negocio": "[541246] IFSP", "motivo": "Eu fiz o login porque achei que ele oferecia o teste Disc grátis", "proprietario": "Evelyn Camargo"}, {"negocio": "[541175] TOTVS", "motivo": "Descarte Correto - Estava só curiosa", "proprietario": "Evelyn Camargo"}, {"negocio": "[542469] Confidencial", "motivo": "Descarte correto  - Respondeu que fez o cadastro engano", "proprietario": "Carla Bonifacio"}, {"negocio": "[542449] brf", "motivo": "Descarte correto  - Respondeu que fez o cadastro engano", "proprietario": "Carla Bonifacio"}, {"negocio": "[542111] Tribunal de Justiça", "motivo": "Descarte correto -  Uso pessoal ", "proprietario": "Carla Bonifacio"}], 
+            "Sem Sucesso na Cadência": [{"negocio": "[541372] C&A", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 11d", "proprietario": "Evelyn Camargo"}, {"negocio": "[541123] SBT", "motivo": "Ciclo de 14d esforço de ligação , whats e email sem sucesso", "proprietario": "Evelyn Camargo"}, {"negocio": "[541132] PUC Minas", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 12d", "proprietario": "Evelyn Camargo"}, {"negocio": "[541031] Lojas Renner", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 25d", "proprietario": "Evelyn Camargo"}, {"negocio": "[540702] Confidencial", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 21d ", "proprietario": "Evelyn Camargo"}, {"negocio": "[540728] Confidencial", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 13d", "proprietario": "Evelyn Camargo"}, {"negocio": "[540541] BRQ", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 21d ", "proprietario": "Evelyn Camargo"}, {"negocio": "[542526] ufpr", "motivo": "Descarte com 10d  ciclo sem retorno em nenhum canal - Feedback respeitar 14d de trial", "proprietario": "Carla Bonifacio"}, {"negocio": "[542457] Unimed", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso", "proprietario": "Carla Bonifacio"}, {"negocio": "[542036] Confidencial", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 10d", "proprietario": "Carla Bonifacio"}, {"negocio": "[541999] Confidencial", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 11d", "proprietario": "Carla Bonifacio"}, {"negocio": "[541604] Confidencial", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 21d ", "proprietario": "Carla Bonifacio"}, {"negocio": "[541461] Correios", "motivo": "cadencia de ligações e emails realizado sem sucesso ciclo de 21d - tel não é wpp ", "proprietario": "Carla Bonifacio"}, {"negocio": "[541459] UFRN", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 23d", "proprietario": "Carla Bonifacio"}, {"negocio": "[541280] UFSC", "motivo": "Ciclo de 19d esforço de ligação , whats e email sem sucesso ", "proprietario": "Carla Bonifacio"}, {"negocio": "[541018] TOTVS", "motivo": "Ciclo de 14d esforço de ligação , whats e email sem sucesso ", "proprietario": "Carla Bonifacio"}, {"negocio": "[541026] Vivo", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 18d", "proprietario": "Carla Bonifacio"}, {"negocio": "[540786] Grupo Soma", "motivo": "Ciclo de 15d esforço de ligação , whats e email sem sucesso", "proprietario": "Carla Bonifacio"}, {"negocio": "[540733] Confidencial", "motivo": "cadencia com 6 emails encaminhados sem retorno", "proprietario": "Carla Bonifacio"}, {"negocio": "[540822] Unimed", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 14d", "proprietario": "Carla Bonifacio"}, {"negocio": "[540542] Tenda", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 15d", "proprietario": "Carla Bonifacio"}, {"negocio": "[542057] Lojas CEM", "motivo": "Descarte correto - 17d de ciclo sem retorno em nenhum canal ", "proprietario": "Letícia Maciel"}, {"negocio": "[542013] Confidencial", "motivo": "Lead parou de responder", "proprietario": "Letícia Maciel"}, {"negocio": "[541666] Lojas Colombo", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 20d", "proprietario": "Letícia Maciel"}, {"negocio": "[541619] Confidencial", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 15d", "proprietario": "Letícia Maciel"}, {"negocio": "[541618] brf", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 24d", "proprietario": "Letícia Maciel"}, {"negocio": "[541612] brf", "motivo": "Ciclo de 14d apresentou interesse no inicio mas não retornou", "proprietario": "Letícia Maciel"}, {"negocio": "[541584] Grendene", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 13d", "proprietario": "Letícia Maciel"}, {"negocio": "[541306] Prefeitura  Municipal", "motivo": "Ciclo de 16d esforço de ligação , whats e email sem sucesso ", "proprietario": "Letícia Maciel"}, {"negocio": "[541094] SBT", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 21d ", "proprietario": "Letícia Maciel"}, {"negocio": "[540656] Sebrae", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 12d", "proprietario": "Letícia Maciel"}, {"negocio": "[540587] odonto seven", "motivo": "cadencia de ligações , whas e emails realizado sem sucesso ciclo de 11", "proprietario": "Letícia Maciel"}, {"negocio": "[540536] FACCHINI S/A", "motivo": "(Prospecção) Não houve contato", "proprietario": "Amanda Contiéri"}], 
+            "A Validar / Revisão": [{"negocio": "[542571] ufpr", "motivo": "**** validar registro ", "proprietario": "Evelyn Camargo"}, {"negocio": "[542387] Tribunal de Justiça", "motivo": "**** validar registro ", "proprietario": "Evelyn Camargo"}, {"negocio": "[542285] SESI", "motivo": "**** validar registro ", "proprietario": "Evelyn Camargo"}, {"negocio": "[541289] Confidencial", "motivo": "** validar ", "proprietario": "Evelyn Camargo"}, {"negocio": "[541065] Ambev", "motivo": "** validar ", "proprietario": "Evelyn Camargo"}, {"negocio": "[542617] Confidencial", "motivo": "**** validar registro ", "proprietario": "Carla Bonifacio"}, {"negocio": "[542587] Cargill Alimentos", "motivo": "**** validar registro ", "proprietario": "Carla Bonifacio"}, {"negocio": "[541433] Embalagens Prática", "motivo": "** validar ", "proprietario": "Carla Bonifacio"}, {"negocio": "[542878] colégio Estadual de Tempo Integral Profª Jaidê Rocha", "motivo": "**** validar registro ", "proprietario": "Letícia Maciel"}, {"negocio": "[542861] brf", "motivo": "**** validar registro ", "proprietario": "Letícia Maciel"}, {"negocio": "[540605] Lojas Renner", "motivo": "** validar ", "proprietario": "Letícia Maciel"}]
+        };
         
-        // Mapear os labels dos gráficos para as chaves do dicionário gerado pelo Python
         const categoryMap = {
             'Sem Interesse / Concorrente': 'Sem Interesse / Concorrente',
             'Dados Inválidos / Fakes': 'Dados Inválidos / Fakes',
@@ -186,17 +218,17 @@
 
         const labels = Object.keys(categoryMap);
         const dataValues = [40, 40, 33, 11, 9, 5, 1];
+        const totalLeads = dataValues.reduce((a, b) => a + b, 0);
         const backgroundColors = [
-            'rgba(59, 130, 246, 0.8)',
+            'rgba(96, 165, 250, 0.8)',
             'rgba(239, 68, 68, 0.8)',
             'rgba(234, 179, 8, 0.8)',
             'rgba(168, 85, 247, 0.8)',
             'rgba(107, 114, 128, 0.8)',
             'rgba(156, 163, 175, 0.8)',
-            'rgba(16, 185, 129, 0.8)'
+            'rgba(34, 197, 94, 0.8)'
         ];
 
-        // Modal Logic
         const modal = document.getElementById('modal');
         const closeModalBtn = document.getElementById('close-modal');
         const modalTitle = document.getElementById('modal-title');
@@ -205,11 +237,13 @@
         function openModal(categoryLabel) {
             const dataKey = categoryMap[categoryLabel];
             const details = rawData[dataKey];
+            const count = details ? details.length : 0;
+            const percentage = ((count / totalLeads) * 100).toFixed(1) + '%';
             
-            modalTitle.textContent = `Oportunidades: ${categoryLabel} (${details ? details.length : 0})`;
+            modalTitle.textContent = `${categoryLabel} | ${count} leads (${percentage})`;
             detailsTbody.innerHTML = '';
 
-            if (details && details.length > 0) {
+            if (count > 0) {
                 details.forEach(item => {
                     const row = document.createElement('tr');
                     
@@ -245,7 +279,6 @@
             modal.classList.remove('show');
         });
 
-        // Fechar ao clicar fora do conteúdo
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 modal.classList.remove('show');
@@ -260,7 +293,6 @@
             }
         }
 
-        // PDF Export Logic
         document.getElementById('export-btn').addEventListener('click', () => {
             const element = document.getElementById('pdf-content');
             const opt = {
@@ -273,7 +305,17 @@
             html2pdf().set(opt).from(element).save();
         });
 
-        // Bar Chart
+        const tooltipConfig = {
+            callbacks: {
+                label: function(context) {
+                    const value = context.raw;
+                    const percentage = ((value / totalLeads) * 100).toFixed(1) + '%';
+                    return `Quantidade: ${value} (${percentage})`;
+                },
+                footer: () => 'Clique para ver as oportunidades'
+            }
+        };
+
         const ctxBar = document.getElementById('barChart').getContext('2d');
         const barChart = new Chart(ctxBar, {
             type: 'bar',
@@ -283,8 +325,7 @@
                     label: 'Quantidade',
                     data: dataValues,
                     backgroundColor: backgroundColors,
-                    borderRadius: 4,
-                    cursor: 'pointer' // Custom property for hover effect if possible, standard chart.js doesn't natively support css cursors easily without plugins but the click event works.
+                    borderRadius: 4
                 }]
             },
             options: {
@@ -296,11 +337,7 @@
                 },
                 plugins: {
                     legend: { display: false },
-                    tooltip: {
-                        callbacks: {
-                            footer: () => 'Clique para ver as oportunidades'
-                        }
-                    }
+                    tooltip: tooltipConfig
                 },
                 scales: {
                     y: { beginAtZero: true }
@@ -308,7 +345,6 @@
             }
         });
 
-        // Doughnut Chart
         const ctxDoughnut = document.getElementById('doughnutChart').getContext('2d');
         const doughnutChart = new Chart(ctxDoughnut, {
             type: 'doughnut',
@@ -329,11 +365,7 @@
                 },
                 plugins: {
                     legend: { position: 'right' },
-                    tooltip: {
-                        callbacks: {
-                            footer: () => 'Clique para ver as oportunidades'
-                        }
-                    }
+                    tooltip: tooltipConfig
                 }
             }
         });
